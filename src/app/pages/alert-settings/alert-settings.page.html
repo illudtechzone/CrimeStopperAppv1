@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Alert Settings</ion-title>
+      <ion-icon name="close" slot="end" class="cursor" routerLink="/tabs/tab2"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <br>
+    <br>
+      <ion-segment (ionChange)="segmentChanged($event)" value="redAlert">
+          <ion-segment-button value="redAlert">
+            <ion-label>RedAlert</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="Orange Alert">
+            <ion-label>Orange Alert</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="Green Alert">
+              <ion-label>Green Alert</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+        <ion-card class="complaintCard">
+          <ion-item>
+            <ion-avatar slot="start">
+                <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+              </ion-avatar>
+            <ion-text slot="start">
+              <p>Police </p>
+            </ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-button  slot="end" (click)=conformRequest(request)>
+              <b>
+              Edit-
+            </b>
+            </ion-button>
+            <ion-button  slot="end" (click)=cancelRequest(request)>
+              <b>
+              remove
+            </b>
+            </ion-button>
+            </ion-item>
+        </ion-card>
+        <ion-card class="complaintCard">
+          <ion-item>
+            <ion-icon name="add" (click)="presentAddContactModal()"></ion-icon>
+            <ion-label> add contact</ion-label>
+          </ion-item>
+  
+        </ion-card>
+  </ion-content>
+  

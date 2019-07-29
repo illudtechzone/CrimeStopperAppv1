@@ -1,41 +1,106 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab One
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>
+       
+          Crime Stopper
+        
+      </ion-title>
 
-<ion-content>
-    <ion-card class="welcome-card">
+   <ion-icon slot="end" class="cursor" name="notifications"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content color="secondry">
+ 
+  <br>
+  <ion-card>
+    <ion-segment color="shade">
+        <ion-segment-button  value="all">
+          <ion-label><ion-text color="dark">All</ion-text></ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="traffic">
+          <ion-label color="dark">Traffic</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="bribe">
+            <ion-label color="dark">Bribe</ion-label>
+          </ion-segment-button>
+      </ion-segment>
+    </ion-card>
+    <ion-card complaintCard class=" complaintCard">
+        <ion-item margin-center lines="none">
+          <ion-avatar class="compaintAvatharStyle">
+              <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-avatar>
+             <ion-text> manu</ion-text>
+          </ion-item>
       <img src="/assets/shapes.svg" alt="" />
       <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+        <ion-card-title>car parked in no parking</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+        <ion-row>
+          <ion-col>
+            <ion-text>
+            23 likes
+          </ion-text>
+        </ion-col>
+        <ion-col>
+            <ion-text>
+                23 dislikes
+              </ion-text>
+        </ion-col>
+      </ion-row>
       </ion-card-content>
     </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+    <ion-buttons class="complaintButtons">
+        <ion-button slot="start" shape="round" class="complaintButton " color="medium" fill="solid">
+          <ion-icon name="thumbs-up"></ion-icon>       
+         </ion-button>
+       
+        <ion-button slot="end" shape="round" class="complaintButton " color="medium" fill="solid">
+          <ion-icon name="thumbs-down"></ion-icon>
+        </ion-button>
+       
+        <ion-button slot="end" [routerLink]="['/comments']" shape="round" class="complaintButton " color="medium" fill="solid">
+          <ion-icon name="text"></ion-icon>       
+         </ion-button>
+         
+    </ion-buttons>
+    <br>
+        <ion-card class="complaintCard">
+            <ion-item margin-center>
+              <ion-avatar class="compaintAvatharStyle">
+                  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+              </ion-avatar>
+                 <ion-text> manu</ion-text>
+              </ion-item>
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-title>car parked in no parking</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-buttons class="complaintButtons">
+          <ion-button slot="start" shape="round" class="complaintButton "color="medium" fill="solid">
+            <ion-icon name="thumbs-up"></ion-icon>       
+           </ion-button>
+         
+          <ion-button slot="end" shape="round" class="complaintButton " color="medium" fill="solid">
+            <ion-icon name="thumbs-down"></ion-icon>
+          </ion-button>
+         
+          <ion-button slot="end" href="/comments" shape="round" class="complaintButton " color="medium" fill="solid">
+            <ion-icon name="text"></ion-icon>       
+           </ion-button>
+           
+      </ion-buttons>
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+            <ion-fab-button (click)="createComplaint()" color="dark" class="animated rotateIn">
+              <ion-icon name="add"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+        
 </ion-content>

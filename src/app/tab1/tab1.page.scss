@@ -2,3 +2,33 @@
   max-height: 35vh;
   overflow: hidden;
 }
+.cursor {
+  font-size: larger;
+  position: relative;
+  padding-right: 13px;
+}
+.compaintAvatharStyle{
+margin: 10px
+}
+.complaintCard{
+ 
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #f0f9ee);
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 26px;
+  animation-iteration-count: 1;
+ animation-delay:-2s;
+
+}
+.complaintButton{
+  height: 60px;
+  width: 60px;
+  animation-iteration-count: 1;
+
+}
+.complaintButtons{
+  padding-left: 21px;
+}

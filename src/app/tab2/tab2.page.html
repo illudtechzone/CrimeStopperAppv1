@@ -1,9 +1,28 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
+  <ion-toolbar color="dark">
+    <ion-title >
+   Crime Stopper
     </ion-title>
+    <ion-icon name="settings" slot="end" class="cursor" routerLink="/alert-settings"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/image/bg-banner.jpg"></ion-img>
+    <ion-card-header>
+      <ion-card-title>RedAlert</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Your Social Emergency Handler</p>
+    </ion-card-content>
+  </ion-card>
+  <h1 text-center>Broadcast Your Emergency</h1>
+  <ion-row justify-content-center>
+    <ion-buttons>
+      <ion-button fill="solid" color="danger" shape="round"  (click)="presentModal()" class="alert-button">RED</ion-button>
+      <ion-button fill="solid" color="warning" shape="round" (click)="presentModal()" class="alert-button">ORANGE</ion-button>
+      <ion-button fill="solid" color="success" shape="round" (click)="presentModal()"class="alert-button">GREEN</ion-button>
+    </ion-buttons>
+  </ion-row>
+</ion-content>

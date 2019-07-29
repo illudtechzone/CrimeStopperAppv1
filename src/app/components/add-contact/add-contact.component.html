@@ -1,0 +1,79 @@
+<div>
+  <br>
+  <br>
+  <ion-text class="modalText">add person not in crime stopper ? </ion-text> <ion-text (click)="createContact()" color="primary"> click</ion-text>
+  <ion-searchbar></ion-searchbar>
+ 
+<ion-card *ngIf="notInCrimeStopper" class="complaintCard">
+<br>
+<br>
+<ion-item>
+  
+  <ion-input placeholder="name"></ion-input>
+</ion-item>
+<ion-item>
+  
+    <ion-input placeholder="mail"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-input placeholder="phone"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Add to</ion-label>
+        <ion-select multiple="true">
+          <ion-select-option value="redAlert" >Red alert</ion-select-option>
+          <ion-select-option value="orangeAlert">Orange Alert</ion-select-option>
+          <ion-select-option value="greenAlert">Green Alert</ion-select-option>
+        </ion-select>
+  </ion-item>
+  
+    <ion-button expand="block">
+      save
+    </ion-button>
+    <ion-button expand="block">
+      cancel
+    </ion-button>
+  
+</ion-card>
+<ion-card  *ngIf="!notInCrimeStopper" class="complaintCard">
+<ion-item  lines="full" >
+    <ion-avatar slot="start">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+    <ion-text slot="start">
+      <p>manu kg </p>
+    </ion-text>
+
+  </ion-item>
+  <ion-item>
+        <ion-label>Add to</ion-label>
+        <ion-select multiple="true">
+          <ion-select-option value="redAlert" >Red alert</ion-select-option>
+          <ion-select-option value="orangeAlert">Orange Alert</ion-select-option>
+          <ion-select-option value="greenAlert">Green Alert</ion-select-option>
+        </ion-select>
+  </ion-item>
+
+</ion-card>
+<ion-card  *ngIf="!notInCrimeStopper" class="complaintCard">
+    <ion-item  lines="full" >
+        <ion-avatar slot="start">
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-avatar>
+        <ion-text slot="start">
+          <p>Sooraj pn </p>
+        </ion-text>
+    
+      </ion-item>
+      <ion-item>
+            <ion-label>Add to</ion-label>
+            <ion-select multiple="true">
+              <ion-select-option value="redAlert" >Red alert</ion-select-option>
+              <ion-select-option value="orangeAlert">Orange Alert</ion-select-option>
+              <ion-select-option value="greenAlert">Green Alert</ion-select-option>
+            </ion-select>
+      </ion-item>
+    
+    </ion-card>
+
+</div>

@@ -1,4 +1,6 @@
+import { ModalController } from '@ionic/angular';
 import { Component } from '@angular/core';
+import { CreateComplaintComponent } from '../components/create-complaint/create-complaint.component';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private modalController:ModalController) {}
+
+ async createComplaint() {
+     const modal = await this.modalController.create({
+       component: CreateComplaintComponent,
+       componentProps: {
+       }
+     });
+     return await modal.present();
+   }
 
 }
